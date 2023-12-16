@@ -25,10 +25,12 @@ defmodule Hello do
       exit(:normal)
     end
     [user_name, class] = String.split(String.trim(input), ";")
+    user_name = String.capitalize(String.trim(user_name))
+    class = String.capitalize(String.trim(class))
     IO.puts("hello #{user_name} the #{class}")
     IO.puts("What do you want to do?")
-    chosen_action = IO.gets(print_options(actions) <> "\n")
-    if (get_class_action_result(String.trim(class), String.trim(chosen_action))) do
+    chosen_action = String.capitalize(String.trim(IO.gets(print_options(actions) <> "\n")))
+    if (get_class_action_result(class, chosen_action)) do
       IO.puts("#{chosen_action} roll success!")
     else
       IO.puts("You failed to #{chosen_action}!")
@@ -38,7 +40,8 @@ defmodule Hello do
 
   def print_options(strings) when is_list(strings) do
     Enum.reduce(strings, "", fn(option), acc->
-      acc <> option <> if acc == "", do: "", else: " | "
+      seperator = if acc == "", do: "", else: " | "
+      acc <> seperator <> option
     end)
   end
 
