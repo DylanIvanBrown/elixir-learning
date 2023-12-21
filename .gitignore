@@ -9,38 +9,38 @@ erl_crash.dump
 /config/*.secret.exs
 .elixir_ls/
 # The directory Mix will write compiled artifacts to.
-/phoenix/_build/
+/phoenix/hello/_build/
 
 # If you run "mix test --cover", coverage assets end up here.
-/phoenix/cover/
+/phoenix/hello/cover/
 
 # The directory Mix downloads your dependencies sources to.
-/phoenix/deps/
+/phoenix/hello/deps/
 
 # Where 3rd-party dependencies like ExDoc output generated docs.
-/phoenix/doc/
+/phoenix/hello/doc/
 
 # Ignore .fetch files in case you like to edit your project deps locally.
-/phoenix/.fetch
+/phoenix/hello/.fetch
 
 # If the VM crashes, it generates a dump, let's ignore it too.
-/phoenixerl_crash.dump
+/phoenix/helloerl_crash.dump
 
 # Also ignore archive artifacts (built via "mix archive.build").
-/phoenix/*.ez
+/phoenix/hello/*.ez
 
 # Temporary files, for example, from tests.
-/phoenix/tmp/
+/phoenix/hello/tmp/
 
 # Ignore package tarball (built via "mix hex.build").
-/phoenix/hello-*.tar
+/phoenix/hello/hello-*.tar
 
 # Ignore assets that are produced by build tools.
-/phoenix/priv/static/assets/
+/phoenix/hello/priv/static/assets/
 
 # Ignore digested assets cache.
-/phoenix/priv/static/cache_manifest.json
+/phoenix/hello/priv/static/cache_manifest.json
 
 # In case you use Node.js/npm, you want to ignore these.
-/phoenix/npm-debug.log
-/phoenix/assets/node_modules/
+/phoenix/hello/npm-debug.log
+/phoenix/hello/assets/node_modules/
